@@ -1,0 +1,10 @@
+[16:43:35] leave, over 10
+[16:43:41] come back to work
+[16:44:45] leave, over 10
+[16:45:05] come back to work
+[16:47:01] leave, over 10
+[16:47:14] come back to work
+[16:47:25] leave, over 10
+[16:47:52] come back to work
+[16:57:51] leave, over 10
+[2026-03-26 16:58:24] come back to work

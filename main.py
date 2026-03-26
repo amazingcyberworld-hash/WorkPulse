@@ -1,3 +1,8 @@
+print("==============================")
+print("🚀 프로그램이 정상적으로 시작되었습니다!")
+print("==============================")
+
+
 import configparser 
 from ActiveMonitor import ActivityMonitor
 
