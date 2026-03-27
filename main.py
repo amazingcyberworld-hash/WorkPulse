@@ -1,8 +1,3 @@
-print("==============================")
-print("🚀 프로그램이 정상적으로 시작되었습니다!")
-print("==============================")
-
-
 import configparser 
 from ActiveMonitor import ActivityMonitor
 
@@ -15,5 +10,5 @@ idle_threshold = int(config['SETTINGS']['IDLE_THRESHOLD'])
 print(f"社員番号 [{emp_id}]を読み取りました.")
 print(f"IDLE_THRESHOLD [{emp_id}]を読み取りました.")
 
-monitor = ActivityMonitor(idle_threshold)
+monitor = ActivityMonitor(emp_id, idle_threshold)
 monitor.start()

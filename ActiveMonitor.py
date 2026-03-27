@@ -1,12 +1,34 @@
 import time 
+import requests
 from pynput import mouse, keyboard 
 from datetime import datetime 
 
 class ActivityMonitor: 
-    def __init__(self, idle_threshold):
+    def __init__(self, emp_id ,idle_threshold):
+        self.emp_id = emp_id
         self.idle_threshold = idle_threshold 
         self.last_active_time = time.time()
         self.is_idle = False 
+
+    def send_to_server(self, status): 
+        url = "http://127.0.0.1:5000/api/v1/activity"
+
+        payload = {
+            "emp_id": self.emp_id,
+            "status": status,
+            "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        }
+
+        try: 
+            response = requests.post(url, json=payload, timeout=3, verify=False) 
+
+            if response.status_code == 200:
+                print(f"success {status}")
+            else:
+                print(f"error {response.status_code}")
+
+        except Exception as e:
+            print(f"network error, fail to connect due to {e}")
 
     def on_activity(self, *args): 
         self.last_active_time = time.time() 
@@ -14,6 +36,7 @@ class ActivityMonitor:
             log_msg = f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] come back to work"
             print(log_msg)
             self.save_to_log(log_msg)
+            self.send_to_server("BACK")
             self.is_idle = False  
     
     def check_idle(self):
@@ -25,6 +48,7 @@ class ActivityMonitor:
             
             print(log_msg)
             self.save_to_log(log_msg)
+            self.send_to_server("LEAVE")
             self.is_idle = True 
 
     def start(self):

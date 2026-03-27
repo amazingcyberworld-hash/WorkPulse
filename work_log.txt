@@ -8,3 +8,21 @@
 [16:47:52] come back to work
 [16:57:51] leave, over 10
 [2026-03-26 16:58:24] come back to work
+[17:28:45] leave, over 10
+[2026-03-27 17:28:48] come back to work
+[17:30:09] leave, over 10
+[2026-03-27 17:30:12] come back to work
+[17:31:26] leave, over 5
+[2026-03-27 17:31:28] come back to work
+[17:33:39] leave, over 5
+[2026-03-27 17:33:46] come back to work
+[17:35:06] leave, over 5
+[2026-03-27 17:35:17] come back to work
+[17:37:32] leave, over 5
+[2026-03-27 17:37:46] come back to work
+[17:37:58] leave, over 5
+[2026-03-27 17:40:04] come back to work
+[17:41:56] leave, over 5
+[2026-03-27 17:41:58] come back to work
+[17:45:22] leave, over 5
+[2026-03-27 17:45:53] come back to work
